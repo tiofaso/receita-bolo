@@ -24,7 +24,7 @@ $cobertura = vetor(
 	[0] = "4 colheres de sopa de leite",
 	[1] = "1 colher de sopa de manteiga",
 	[2] = "1 barra de chocolate ao leite",
-	[3] = "1/2 xícare de açúcar",
+	[3] = "1/2 xícara de açúcar",
 );
 
 $preparo = ""; //tigela sem nenhum ingrediente
