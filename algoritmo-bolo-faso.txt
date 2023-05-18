@@ -1,0 +1,47 @@
+//Algoritmo simples para se fazer um bolo
+
+var $massa //array da massa do bolo
+var $cobertura //array da cobertura do bolo
+var $preparo //variável para preparar partes do bolo
+var $assadeira //variável para colocar tudo do bolo
+
+
+$liquidificador = 0; //preparo do bolo no liquidificador
+
+$massa = vetor(
+	[0] = "3 ovos",
+	[1] = "2 xícaras de farinha",
+	[2] = "1/2 xícara de óleo",
+	[3] = "1 pitada de sal",
+	[4] = "1 xícara de açúcar",
+	[5] = "1 xícara de chocolate em pó",
+	[6] = "1 xícara de fermento",
+	[7] = "1 xícara de leite quente",
+	[8] = "1 barra de chocolate amargo picado"
+);
+
+$cobertura = vetor(
+	[0] = "4 colheres de sopa de leite",
+	[1] = "1 colher de sopa de manteiga",
+	[2] = "1 barra de chocolate ao leite",
+	[3] = "1/2 xícare de açúcar",
+);
+
+$preparo = ""; //tigela sem nenhum ingrediente
+
+enquanto($liquidificador <= 8){//preparando massa do bolo
+	$preparo = $preparo + mistura($massa[$liquidificador]);
+	$liquidificador = $liquidificador + 1;
+}
+
+$assadeira = assar($preparo);
+
+$preparo = ""; //tigela sem nenhum ingrediente
+$liquidificador = 0 //zerando liquidificador
+
+enquanto($liquidificador <= 3){//preparando cobertura do bolo
+	$preparo = $preparo + mistura($cobertura[$liquidificador]);
+	$liquidificador = $liquidificador + 1;
+}
+
+$assadeira = $assadeira + $preparo; //bolo pronto
